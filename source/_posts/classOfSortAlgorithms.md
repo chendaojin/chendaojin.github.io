@@ -6,6 +6,7 @@ tags: 排序
 categories: 算法
 mathjax: true
 description: 持续记录更新见过的排序算法
+typora-root-url: classOfSortAlgorithms
 ---
 
 # 排序算法
