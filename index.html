@@ -302,6 +302,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/javaReflect/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen D.J.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cdj's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/01/javaReflect/" itemprop="url">Java反射机制</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T14:00:00Z">
+                2019-03-01
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-01T15:00:00Z">
+                2019-03-01
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/01/javaReflect/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/01/javaReflect/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/01/javaReflect/" class="leancloud_visitors" data-flag-title="Java反射机制">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Java反射机制"><a href="#Java反射机制" class="headerlink" title="Java反射机制"></a>Java反射机制</h1><p>Java反射机制使程序运行时能动态加载类对象, 并能够获得该类的字段和方法. 对于一些通过多态和动态绑定的程序, 我们可以通过读取配置文件, 再利用Java反射实现的方式来替换.</p>
+<h2 id="常见应用"><a href="#常见应用" class="headerlink" title="常见应用"></a>常见应用</h2><ul>
+<li>反射机制常用于框架开发 </li>
+<li>Eclipse等IDE获取类的方法</li>
+<li>动态代理</li>
+<li>跳过泛型检查</li>
+</ul>
+<h2 id="主要操作"><a href="#主要操作" class="headerlink" title="主要操作"></a>主要操作</h2><ol>
+<li>获取class, 有三种方式: </li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Person p = <span class="keyword">new</span> Person(<span class="string">"cdj"</span>, <span class="number">23</span>);</span><br><span class="line">Class clazz1 = p.getClass();</span><br><span class="line"></span><br><span class="line">Class clazz2 = Person.class;</span><br><span class="line">Class clazz = Class.forName(<span class="string">"me.forz.javaReflect.path.Person"</span>);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>获取Constructor</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分两种, 有参和无参</span></span><br><span class="line">Constructor c1 = clazz.getConstructor(); <span class="comment">// 无参构造器</span></span><br><span class="line">Constructor c2 = clazz.getConstructor(String.class, <span class="keyword">int</span>.class); <span class="comment">// 有参</span></span><br><span class="line">Person p = (Person) c2.newInstance(<span class="string">"constru"</span>, <span class="number">23</span>);</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>获取Field</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分两种, 是否是private</span></span><br><span class="line"><span class="comment">// Field f = clazz.getField(fieldName);</span></span><br><span class="line">Field f = clazz.getDeclaredField(fieldName);<span class="comment">// Field名称</span></span><br><span class="line">f.setAccessible(<span class="keyword">true</span>); <span class="comment">//私有字段需要设置此项</span></span><br><span class="line">f.set(obj, val);</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>获取Method</p>
+<p>同Field, Method也分成是否是private两种, 此处不再赘述. 下面展示一种利用反射跳过泛型检查的例子:</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt; al = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">al.add(<span class="number">1</span>);</span><br><span class="line">al.add(<span class="number">2</span>);</span><br><span class="line">System.out.println(al); <span class="comment">//[1, 2]</span></span><br><span class="line"></span><br><span class="line">Class clazz = Class.forName(<span class="string">"java.util.ArrayList"</span>);</span><br><span class="line">Method m = clazz.getDeclaredMethod(<span class="string">"add"</span>, Object.class);</span><br><span class="line">m.invoke(al, <span class="string">"a"</span>);</span><br><span class="line">System.out.println(al); <span class="comment">// [1, 2, a]</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><p>只能针对接口做代理; 需要实现<code>InvocationHandler</code>接口</p>
+<p>假设有一个<code>Fruit</code>接口, 包含一个<code>eat()</code>方法, <code>FruitImpl</code>是一个实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        FruitImpl fi = <span class="keyword">new</span> FruitImpl();</span><br><span class="line">        fi.eat();<span class="comment">// 输出: eating</span></span><br><span class="line"></span><br><span class="line">        MyInvocationHandler mih = <span class="keyword">new</span> MyInvocationHandler(fi);</span><br><span class="line">        Fruit f = (Fruit) Proxy.newProxyInstance(fi.getClass().getClassLoader(), fi.getClass().getInterfaces(), mih);</span><br><span class="line">        f.eat(); <span class="comment">// 输出 befor\n eating\n after</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyInvocationHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Object target;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyInvocationHandler</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.target = obj;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"befor"</span>);</span><br><span class="line">        method.invoke(target, args);</span><br><span class="line">        System.out.println(<span class="string">"after"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/11/DLCV_Start_Errata/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -528,8 +731,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-10T08:52:34Z">
-                2018-11-10
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-01T07:10:50Z">
+                2019-03-01
               </time>
             
           </span>
@@ -887,7 +1090,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -898,7 +1101,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -909,7 +1112,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -995,7 +1198,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
