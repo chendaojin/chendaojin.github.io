@@ -8,8 +8,6 @@ mathjax: true
 description: 
 ---
 
-<!--more-->
-
 # vim参数配置
 
 vim配置路径： `~/.vimrc`
@@ -26,6 +24,8 @@ vim配置路径： `~/.vimrc`
 |    set number    |          显示行数           | 不显示：nonumber |
 |                  |                             |                  |
 
+<!--more-->
+
 # vim快捷键
 
 ![vim_shortcut_key_ZH-CN](note_vim/vim_shortcut_key_ZH-CN.gif)
@@ -40,8 +40,6 @@ set number
 set autoindent
 set list
 ```
-
-# 其他
 
 # 其他
 

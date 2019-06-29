@@ -5,7 +5,7 @@ updated: 2019-06-18 16:00
 tags: [hexo]
 categories: 随笔
 mathjax: true
-description: 
+description: hero & next博客搭建过程中遇到的问题及解决方法
 ---
 
 # hexo图片路径的问题
