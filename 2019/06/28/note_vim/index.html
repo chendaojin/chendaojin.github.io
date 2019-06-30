@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="vim&amp;#x53C2;&amp;#x6570;&amp;#x914D;&amp;#x7F6E;vim&amp;#x914D;&amp;#x7F6E;&amp;#x8DEF;&amp;#x5F84;&amp;#xFF1A; ~/.vimrc    &amp;#x547D;&amp;#x4EE4; &amp;#x529F;&amp;#x80FD; &amp;#x5907;&amp;#x6CE8;     set tabstop=4 &amp;#x8BBE;&amp;#x7F6E;tab&amp;#x6240;&amp;#x5360;&amp;#x76">
+<meta name="description" content="日常vim配置&amp;操作记录">
 <meta name="keywords" content="vim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim使用笔记">
 <meta property="og:url" content="http://yoursite.com/2019/06/28/note_vim/index.html">
 <meta property="og:site_name" content="ChenDJ&#39;s blog">
-<meta property="og:description" content="vim&amp;#x53C2;&amp;#x6570;&amp;#x914D;&amp;#x7F6E;vim&amp;#x914D;&amp;#x7F6E;&amp;#x8DEF;&amp;#x5F84;&amp;#xFF1A; ~/.vimrc    &amp;#x547D;&amp;#x4EE4; &amp;#x529F;&amp;#x80FD; &amp;#x5907;&amp;#x6CE8;     set tabstop=4 &amp;#x8BBE;&amp;#x7F6E;tab&amp;#x6240;&amp;#x5360;&amp;#x76">
+<meta property="og:description" content="日常vim配置&amp;操作记录">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/06/28/note_vim/vim_shortcut_key_ZH-CN.gif">
 <meta property="og:updated_time" content="2019-06-28T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim使用笔记">
-<meta name="twitter:description" content="vim&amp;#x53C2;&amp;#x6570;&amp;#x914D;&amp;#x7F6E;vim&amp;#x914D;&amp;#x7F6E;&amp;#x8DEF;&amp;#x5F84;&amp;#xFF1A; ~/.vimrc    &amp;#x547D;&amp;#x4EE4; &amp;#x529F;&amp;#x80FD; &amp;#x5907;&amp;#x6CE8;     set tabstop=4 &amp;#x8BBE;&amp;#x7F6E;tab&amp;#x6240;&amp;#x5360;&amp;#x76">
+<meta name="twitter:description" content="日常vim配置&amp;操作记录">
 <meta name="twitter:image" content="http://yoursite.com/2019/06/28/note_vim/vim_shortcut_key_ZH-CN.gif">
 
 
@@ -413,6 +413,10 @@
           
 
           
+              <div class="post-description">
+                  日常vim配置&操作记录
+              </div>
+          
 
         </div>
       </header>
@@ -427,7 +431,8 @@
       
 
       
-        <h1 id="vim&#x53C2;&#x6570;&#x914D;&#x7F6E;"><a href="#vim&#x53C2;&#x6570;&#x914D;&#x7F6E;" class="headerlink" title="vim&#x53C2;&#x6570;&#x914D;&#x7F6E;"></a>vim&#x53C2;&#x6570;&#x914D;&#x7F6E;</h1><p>vim&#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#xFF1A; <code>~/.vimrc</code></p>
+        <h1 id="vim&#x5FEB;&#x6377;&#x952E;"><a href="#vim&#x5FEB;&#x6377;&#x952E;" class="headerlink" title="vim&#x5FEB;&#x6377;&#x952E;"></a>vim&#x5FEB;&#x6377;&#x952E;</h1><p><img src="/2019/06/28/note_vim/vim_shortcut_key_ZH-CN.gif" alt="vim_shortcut_key_ZH-CN"></p>
+<h1 id="vim&#x53C2;&#x6570;&#x914D;&#x7F6E;"><a href="#vim&#x53C2;&#x6570;&#x914D;&#x7F6E;" class="headerlink" title="vim&#x53C2;&#x6570;&#x914D;&#x7F6E;"></a>vim&#x53C2;&#x6570;&#x914D;&#x7F6E;</h1><p>vim&#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#xFF1A; <code>~/.vimrc</code></p>
 <table>
 <thead>
 <tr>
@@ -449,7 +454,7 @@
 </tr>
 <tr>
 <td style="text-align:center">set expandtab</td>
-<td style="text-align:center">&#x8F93;&#x5165;tab&#x65F6;&#x81EA;&#x52A8;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x4E3A;&#x7A7A;&#x683C;</td>
+<td style="text-align:center">&#x8F93;&#x5165;&#x7684;tab&#x81EA;&#x52A8;&#x8F6C;&#x5316;&#x4E3A;&#x7A7A;&#x683C;</td>
 <td style="text-align:center">noexpandtab</td>
 </tr>
 <tr>
@@ -473,23 +478,115 @@
 <td style="text-align:center">&#x4E0D;&#x663E;&#x793A;&#xFF1A;nolist</td>
 </tr>
 <tr>
+<td style="text-align:center">set listchars=tab:&#x25B8;\ ,eol:&#xAC;</td>
+<td style="text-align:center">&#x8BBE;&#x7F6E;tab&#x548C;&#x6362;&#x884C;&#x7B26;&#x663E;&#x793A;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">set number</td>
 <td style="text-align:center">&#x663E;&#x793A;&#x884C;&#x6570;</td>
 <td style="text-align:center">&#x4E0D;&#x663E;&#x793A;&#xFF1A;nonumber</td>
 </tr>
 <tr>
+<td style="text-align:center">set laststatus=2</td>
+<td style="text-align:center">&#x603B;&#x663E;&#x793A;&#x72B6;&#x6001;&#x884C;</td>
+<td style="text-align:center">0: &#x4E0D;&#x663E;&#x793A;&#xFF0C;1:&#x591A;&#x4F59;&#x4E00;&#x4E2A;&#x663E;&#x793A;</td>
+</tr>
+<tr>
+<td style="text-align:center">set nowrap</td>
+<td style="text-align:center">&#x4E0D;&#x81EA;&#x52A8;&#x6362;&#x884C;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">set showmatch</td>
+<td style="text-align:center">&#x9AD8;&#x4EAE;&#x663E;&#x793A;&#x5339;&#x914D;&#x7684;&#x62EC;&#x53F7;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">set ruler</td>
+<td style="text-align:center">&#x53F3;&#x4E0B;&#x89D2;&#x663E;&#x793A;&#x5149;&#x6807;&#x4F4D;&#x7F6E;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">set visualbell</td>
+<td style="text-align:center">&#x51FA;&#x9519;&#x65F6;&#xFF0C;&#x5C4F;&#x5E55;&#x95EA;&#x70C1;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">syntax on</td>
+<td style="text-align:center">&#x5F00;&#x542F;&#x9AD8;&#x4EAE;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">hi GROUP KET=VALUE</td>
+<td style="text-align:center">&#x9AD8;&#x4EAE;&#x8BBE;&#x7F6E;&#xFF0C;&#x89C1;&#x540E;&#x6587;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">nnoremap / /\v</td>
+<td style="text-align:center">&#x5FEB;&#x6377;&#x952E;&#x6620;&#x5C04;</td>
+<td style="text-align:center">\v: &#x4EFB;&#x4F55;&#x5143;&#x5B57;&#x7B26;&#x90FD;&#x4E0D;&#x7528;&#x52A0;&#x53CD;&#x659C;&#x6760;</td>
+</tr>
+<tr>
+<td style="text-align:center">vnoremap / /\v</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">\V: &#x4EFB;&#x4F55;&#x5143;&#x5B57;&#x7B26;&#x90FD;&#x8981;&#x52A0;&#x53CD;&#x659C;&#x6760;</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">set hlsearch</td>
+<td style="text-align:center">&#x9AD8;&#x4EAE;&#x641C;&#x7D22;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">set mouse=a</td>
+<td style="text-align:center">&#x9F20;&#x6807;&#x53EF;&#x4EE5;&#x70B9;&#x9009;&#x3001;&#x6EDA;&#x52A8;&#x7B49;</td>
+<td style="text-align:center">&#x5173;&#x95ED;&#xFF1A;set mouse=</td>
 </tr>
 </tbody>
 </table>
 <a id="more"></a>
-<h1 id="vim&#x5FEB;&#x6377;&#x952E;"><a href="#vim&#x5FEB;&#x6377;&#x952E;" class="headerlink" title="vim&#x5FEB;&#x6377;&#x952E;"></a>vim&#x5FEB;&#x6377;&#x952E;</h1><p><img src="/2019/06/28/note_vim/vim_shortcut_key_ZH-CN.gif" alt="vim_shortcut_key_ZH-CN"></p>
-<h1 id="&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;"><a href="#&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;"></a>&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">set expandtab</span><br><span class="line">set number</span><br><span class="line">set autoindent</span><br><span class="line">set list</span><br></pre></td></tr></table></figure>
+<h1 id="vim&#x4E5D;&#x4E2A;&#x9AD8;&#x4EAE;&#x5206;&#x7EC4;"><a href="#vim&#x4E5D;&#x4E2A;&#x9AD8;&#x4EAE;&#x5206;&#x7EC4;" class="headerlink" title="vim&#x4E5D;&#x4E2A;&#x9AD8;&#x4EAE;&#x5206;&#x7EC4;"></a>vim&#x4E5D;&#x4E2A;&#x9AD8;&#x4EAE;&#x5206;&#x7EC4;</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Comment    : &#x6CE8;&#x91CA;</span><br><span class="line">Constant   : &#x5E38;&#x91CF;&#xFF0C;&#x4F8B;&#x5982;&#x6570;&#x5B57;&#x3001;&#x5F15;&#x53F7;&#x5185;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x3002;</span><br><span class="line">Identifier : &#x53D8;&#x91CF;&#x6807;&#x8BC6;&#x7B26;&#x540D;&#x79F0;&#x3002;</span><br><span class="line">Statement  : &#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7684;&#x58F0;&#x660E;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x50CF;&#x201C;if&#x201D;&#x6216;&#x201C;while&#x201D;&#x8FD9;&#x6837;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;</span><br><span class="line">PreProc    : &#x9884;&#x5904;&#x7406;&#xFF0C;&#x4F8B;&#x5982;C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x201C;#include&#x201D;&#x3002;</span><br><span class="line">Type       : &#x53D8;&#x91CF;&#x7C7B;&#x578B;&#xFF0C;&#x4F8B;&#x5982;&#x201C;int&#x201D;&#x3002;</span><br><span class="line">Special    : &#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x7C7B;&#x4F3C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x201C;\n&#x201D;&#x3002;</span><br><span class="line">Underlined : &#x6587;&#x672C;&#x4E0B;&#x5212;&#x7EBF;&#x3002;</span><br><span class="line">Error      : &#x663E;&#x793A;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x9519;&#x8BEF;&#x7684;&#x6587;&#x672C;&#x3002;</span><br></pre></td></tr></table></figure>
+<p>&#x8BBE;&#x7F6E;&#x65B9;&#x5F0F;&#xFF1A;hi GROUP KEY=VALUE&#xFF0C;KEY&#x548C;&#x90E8;&#x5206;VALUE&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> term&#x3001;cterm&#x548C;gui&#xFF0C;&#x4EE3;&#x8868;&#x9ED1;&#x767D;&#x7EC8;&#x7AEF;&#x3001;&#x5F69;&#x8272;&#x7EC8;&#x7AEF;&#x548C;&#x56FE;&#x5F62;&#x754C;&#x9762;</span><br><span class="line"><span class="meta">#</span> &#x9664;&#x4E86;term&#x4EE5;&#x5916;&#xFF0C;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x952E;&#x8FD8;&#x6709;&#x4E24;&#x4E2A;&#x6269;&#x5C55;&#x952E;&#x540D;base-namefg&#x548C;base-namebg</span><br><span class="line">term/cterm/gui: bold, underline, reverse, italic, none</span><br><span class="line"></span><br><span class="line">ctermfg/ctermbg: red, yellow, green , blue, magenta, cyan, white, blcak, gray</span><br><span class="line"></span><br><span class="line">guifg/guibg: &#x4EE5;&#x4E0A;&#x6240;&#x6709;&#x989C;&#x8272;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;#rrggbb&#x683C;&#x5F0F;&#x8272;&#x5F69;&#x3002;</span><br></pre></td></tr></table></figure>
+<h1 id="&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;"><a href="#&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;" class="headerlink" title="&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;"></a>&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;</h1><p>&#x53C2;&#x8003;&#x81EA;&#xFF1A;<a href="https://gist.github.com/simonista/8703722" target="_blank" rel="noopener">https://gist.github.com/simonista/8703722</a> </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">&quot; Don&apos;t try to be vi compatible</span><br><span class="line">set nocompatible</span><br><span class="line"></span><br><span class="line">&quot; Helps force plugins to load correctly when it is turned back on below</span><br><span class="line">filetype off</span><br><span class="line"></span><br><span class="line">&quot; TODO: Load plugins here (pathogen or vundle)</span><br><span class="line"></span><br><span class="line">&quot; Turn on syntax highlighting</span><br><span class="line">syntax on</span><br><span class="line"></span><br><span class="line">&quot; For plugins to load correctly</span><br><span class="line">filetype plugin indent on</span><br><span class="line"></span><br><span class="line">&quot; TODO: Pick a leader key</span><br><span class="line">&quot; let mapleader = &quot;,&quot;</span><br><span class="line"></span><br><span class="line">&quot; Security</span><br><span class="line">set modelines=0</span><br><span class="line"></span><br><span class="line">&quot; Show line numbers</span><br><span class="line">set number</span><br><span class="line"></span><br><span class="line">&quot; Show file stats</span><br><span class="line">set ruler</span><br><span class="line"></span><br><span class="line">&quot; Blink cursor on error instead of beeping (grr)</span><br><span class="line">set visualbell</span><br><span class="line"></span><br><span class="line">&quot; Encoding</span><br><span class="line">set encoding=utf-8</span><br><span class="line"></span><br><span class="line">&quot; Whitespace</span><br><span class="line">set wrap</span><br><span class="line">set textwidth=79</span><br><span class="line">set formatoptions=tcqrn1</span><br><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">set softtabstop=4</span><br><span class="line">set expandtab</span><br><span class="line">set noshiftround</span><br><span class="line"></span><br><span class="line">&quot; Cursor motion</span><br><span class="line">set scrolloff=3</span><br><span class="line">set backspace=indent,eol,start</span><br><span class="line">set matchpairs+=&lt;:&gt; &quot; use % to jump between pairs</span><br><span class="line">runtime! macros/matchit.vim</span><br><span class="line"></span><br><span class="line">&quot; Move up/down editor lines</span><br><span class="line">nnoremap j gj</span><br><span class="line">nnoremap k gk</span><br><span class="line"></span><br><span class="line">&quot; Allow hidden buffers</span><br><span class="line">set hidden</span><br><span class="line"></span><br><span class="line">&quot; Rendering</span><br><span class="line">set ttyfast</span><br><span class="line"></span><br><span class="line">&quot; Status bar</span><br><span class="line">set laststatus=2</span><br><span class="line"></span><br><span class="line">&quot; Last line</span><br><span class="line">set showmode</span><br><span class="line">set showcmd</span><br><span class="line"></span><br><span class="line">&quot; Searching</span><br><span class="line">nnoremap / /\v</span><br><span class="line">vnoremap / /\v</span><br><span class="line">set hlsearch</span><br><span class="line">set incsearch</span><br><span class="line">set ignorecase</span><br><span class="line">set smartcase</span><br><span class="line">set showmatch</span><br><span class="line">map &lt;leader&gt;&lt;space&gt; :let @/=&apos;&apos;&lt;cr&gt; &quot; clear search</span><br><span class="line"></span><br><span class="line">&quot; Remap help key.</span><br><span class="line">inoremap &lt;F1&gt; &lt;ESC&gt;:set invfullscreen&lt;CR&gt;a</span><br><span class="line">nnoremap &lt;F1&gt; :set invfullscreen&lt;CR&gt;</span><br><span class="line">vnoremap &lt;F1&gt; :set invfullscreen&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; Textmate holdouts</span><br><span class="line"></span><br><span class="line">&quot; Formatting</span><br><span class="line">map &lt;leader&gt;q gqip</span><br><span class="line"></span><br><span class="line">&quot; Visualize tabs and newlines</span><br><span class="line">set listchars=tab:&#x25B8;\ ,eol:&#xAC;</span><br><span class="line">&quot; Uncomment this to enable by default:</span><br><span class="line">&quot; set list &quot; To enable by default</span><br><span class="line">&quot; Or use your leader key + l to toggle on/off</span><br><span class="line">map &lt;leader&gt;l :set list!&lt;CR&gt; &quot; Toggle tabs and EOL</span><br><span class="line"></span><br><span class="line">&quot; Color scheme (terminal)</span><br><span class="line">set t_Co=256</span><br><span class="line">set background=dark</span><br><span class="line">let g:solarized_termcolors=256</span><br><span class="line">let g:solarized_termtrans=1</span><br><span class="line">&quot; put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim</span><br><span class="line">&quot; in ~/.vim/colors/ and uncomment:</span><br><span class="line">&quot; colorscheme solarized</span><br><span class="line"></span><br><span class="line">&quot; mouse</span><br><span class="line">set mouse=a</span><br></pre></td></tr></table></figure>
 <h1 id="&#x5176;&#x4ED6;"><a href="#&#x5176;&#x4ED6;" class="headerlink" title="&#x5176;&#x4ED6;"></a>&#x5176;&#x4ED6;</h1><ol>
 <li>&#x67E5;&#x770B;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x7684;vim&#xFF1A;<code>which vim</code></li>
-<li></li>
+<li>&#x5728;<code>.vimrc</code>&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#x8FDB;&#x884C;&#x6CE8;&#x91CA;</li>
 </ol>
+<h2 id="vim-&#x591A;&#x7A97;&#x53E3;"><a href="#vim-&#x591A;&#x7A97;&#x53E3;" class="headerlink" title="vim &#x591A;&#x7A97;&#x53E3;"></a>vim &#x591A;&#x7A97;&#x53E3;</h2><ol>
+<li><p>&#x591A;&#x7A97;&#x53E3;&#x5207;&#x6362;</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim -o file1 file2</span><br><span class="line">vim -O file1 file2</span><br><span class="line"><span class="meta">#</span> &#x4EE5;&#x4E0A;&#x901A;&#x8FC7; Ctrl+ww &#x8FDB;&#x884C;&#x5207;&#x6362;</span><br><span class="line"></span><br><span class="line">vim file1 file2</span><br><span class="line"><span class="meta">#</span> :ls &#x952E;&#x5165;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x6587;&#x4EF6;</span><br><span class="line"><span class="meta">#</span> :b&lt;n&gt; &#x8FDB;&#x884C;&#x5207;&#x6362;&#xFF0C;&#x5982; :b2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>&#x5173;&#x95ED;&#x5F53;&#x524D;&#x7A97;&#x53E3;<code>:bd</code>&#xFF0C;&#x5173;&#x95ED;&#x6240;&#x6709;&#x7A97;&#x53E3; <code>:qa</code>, <code>:wqa</code>&#x7B49;</p>
+</li>
+</ol>
+<h2 id="&#x591A;&#x884C;&#x6CE8;&#x91CA;&#x4E0E;&#x53D6;&#x6D88;"><a href="#&#x591A;&#x884C;&#x6CE8;&#x91CA;&#x4E0E;&#x53D6;&#x6D88;" class="headerlink" title="&#x591A;&#x884C;&#x6CE8;&#x91CA;&#x4E0E;&#x53D6;&#x6D88;"></a>&#x591A;&#x884C;&#x6CE8;&#x91CA;&#x4E0E;&#x53D6;&#x6D88;</h2><ul>
+<li><p>&#x6CE8;&#x91CA;</p>
+<p><code>Ctrl+v</code>&#x8FDB;&#x5165;&#x5757;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;&#xFF0C;&#x9009;&#x4E2D;&#x9700;&#x8981;&#x6CE8;&#x91CA;&#x7684;&#x884C;</p>
+<p><code>Shift+i</code>&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;<code>#</code>&#xFF0C;&#x7B2C;&#x4E00;&#x884C;&#x884C;&#x9996;&#x51FA;&#x73B0;<code>#</code></p>
+<p>&#x8FDE;&#x6309;&#x4E24;&#x6B21;<code>esc</code>&#xFF0C;&#x6240;&#x6709;&#x884C;&#x90FD;&#x6CE8;&#x91CA;&#x6389;&#x4E86;</p>
+</li>
+<li><p>&#x53D6;&#x6D88;&#x6CE8;&#x91CA;</p>
+<p><code>Ctrl+v</code>&#x9009;&#x4E2D;&#x6240;&#x6709;&#x7684;<code>#</code></p>
+<p><code>dd</code>&#x5220;&#x9664;</p>
+</li>
+</ul>
 
       
     </div>
@@ -725,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim参数配置"><span class="nav-number">1.</span> <span class="nav-text">vim参数配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim快捷键"><span class="nav-number">2.</span> <span class="nav-text">vim快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人设置"><span class="nav-number">3.</span> <span class="nav-text">个人设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim快捷键"><span class="nav-number">1.</span> <span class="nav-text">vim快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim参数配置"><span class="nav-number">2.</span> <span class="nav-text">vim参数配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim九个高亮分组"><span class="nav-number">3.</span> <span class="nav-text">vim九个高亮分组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人设置"><span class="nav-number">4.</span> <span class="nav-text">个人设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-多窗口"><span class="nav-number">5.1.</span> <span class="nav-text">vim 多窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多行注释与取消"><span class="nav-number">5.2.</span> <span class="nav-text">多行注释与取消</span></a></li></ol></li></ol></div>
             
 
           </div>

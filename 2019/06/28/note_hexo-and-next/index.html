@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="ChenDJ&#39;s blog">
 <meta property="og:description" content="hero &amp; next博客搭建过程中遇到的问题及解决方法">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/06/28/note_hexo-and-next/nginx.conf.png">
 <meta property="og:updated_time" content="2019-06-18T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo &amp; next 建站笔记">
 <meta name="twitter:description" content="hero &amp; next博客搭建过程中遇到的问题及解决方法">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/28/note_hexo-and-next/nginx.conf.png">
 
 
 
@@ -430,18 +432,20 @@
 
       
         <h1 id="hexo&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x7684;&#x95EE;&#x9898;"><a href="#hexo&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x7684;&#x95EE;&#x9898;" class="headerlink" title="hexo&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x7684;&#x95EE;&#x9898;"></a>hexo&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x7684;&#x95EE;&#x9898;</h1><ul>
-<li>&#x95EE;&#x9898;&#x63CF;&#x8FF0;</li>
-</ul>
+<li><p>&#x95EE;&#x9898;&#x63CF;&#x8FF0;</p>
 <p>hexo&#x4E2D;&#xFF0C;markdown&#x6587;&#x4EF6;<code>test.md</code>&#x7684;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x5939;&#x5728;&#x540C;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#x7684;<code>test</code>&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;<code>test.md</code>&#x53EA;&#x80FD;&#x4EE5;<code>![](test.jpg)</code>&#x7684;&#x5F62;&#x5F0F;&#x5F15;&#x5165;&#x56FE;&#x7247;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x4EE5;<code>![](test/test.jpg)</code>&#x5F15;&#x5165;&#x56FE;&#x7247;&#x3002;</p>
 <p>&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x5728;typora&#x7B49;&#x7F16;&#x8F91;&#x5668;&#x4E2D;&#x7F16;&#x5199;markdown&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C31;&#x4E0D;&#x80FD;&#x770B;&#x5230;&#x56FE;&#x7247;&#x4E86;&#x3002;</p>
-<ul>
-<li>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</li>
-</ul>
+</li>
+<li><p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</p>
 <ol>
 <li>&#x5B89;&#x88C5;<code>npm install hexo-asset-image@0.0.2 &#x2014;save</code>&#xFF0C;1.0.0&#x7248;&#x672C;&#x5C1A;&#x4E0D;&#x80FD;&#x7528;</li>
 <li>hexo&#x4E2D;&#x7684;_config.yml&#x5F00;&#x542F;<code>post_asset_fodler:true</code></li>
-<li>markdown&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;<code>test.md</code>&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E9B;&#x5F15;&#x5165;&#x56FE;&#x7247;&#x4E86;&#xFF1A;<code>![](./test/test.jpg)</code>,<code>![](test/test.jpg)</code>,<code>![](test.jpg)</code></li>
+<li>markdown&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;<code>test.md</code>&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E9B;&#x5F15;&#x5165;&#x56FE;&#x7247;&#x4E86;&#xFF1A;<code>![]  (./test/test.jpg)</code>,<code>![](test/test.jpg)</code>,<code>![](test.jpg)</code></li>
 </ol>
+</li>
+</ul>
+<h1 id="NGINX&#x591A;&#x8DEF;&#x5F84;&#x89E3;&#x6790;"><a href="#NGINX&#x591A;&#x8DEF;&#x5F84;&#x89E3;&#x6790;" class="headerlink" title="NGINX&#x591A;&#x8DEF;&#x5F84;&#x89E3;&#x6790;"></a>NGINX&#x591A;&#x8DEF;&#x5F84;&#x89E3;&#x6790;</h1><p>&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;: /etc/nginx/nginx.conf</p>
+<p><img src="/2019/06/28/note_hexo-and-next/nginx.conf.png" alt="nginx.conf"></p>
 
       
     </div>
@@ -673,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo图片路径的问题"><span class="nav-number">1.</span> <span class="nav-text">hexo图片路径的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo图片路径的问题"><span class="nav-number">1.</span> <span class="nav-text">hexo图片路径的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NGINX多路径解析"><span class="nav-number">2.</span> <span class="nav-text">NGINX多路径解析</span></a></li></ol></div>
             
 
           </div>
