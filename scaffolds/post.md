@@ -1,5 +1,9 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+updated: 
+tags: []
+categories: 
+mathjax: true
+description: 
 ---

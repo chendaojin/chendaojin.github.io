@@ -180,6 +180,10 @@ let g:solarized_termtrans=1
 
 " mouse
 set mouse=a
+
+" ctags
+" set tags=./tags,tags;$HOME
+" set autochdir
 ```
 
 # 其他
@@ -219,4 +223,53 @@ set mouse=a
 
   `dd`删除
 
-  
+## 代码跳转
+
+Ctags finds the definition of a symbol or a function. Cscope can find all the places calling a function. using both of them makes navigation in large source trees very easy.
+
+### ctags
+
+1. 下载安装 `jumbo install ctags`
+2. 在代码目录里生成tags `ctags -R *`
+3. 在代码里 `CTRL + ]` 跳转，按`CTRL+T`跳回
+
+4. `~/.vimrc`文件：`set tags=./tags,tags;$HOME`
+
+   ctag的一些[用法](https://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks)
+
+### cscope
+
+一个比较清爽的[教程](https://invisprints.wordpress.com/2016/09/24/ctagscscope/)
+
+1. 下载安装`jumbo isntall cscope`
+
+2. 缺省状态下 cscope 只扫描 *.c, *.h, *.l, *.y 文件。其实它也支持 C++ 和 Java。如果希望解析这些文件，则需要把这些文件的路径保存在 cscope.files 文件中，这样 cscope 就会为这些文件生成索引。通常用 `find` 命令生成 cscope.files。
+
+   ```
+   find . -name "*.h" -o -name "*.cpp" > cscope.files
+   cscope -Rbkq 
+   ```
+
+   
+
+3. 生成索引文件`cscope -Rbkq`
+
+   其中，R表示搜索子目录，b表示不进入cscope界面，q表示生成cscope.in.out和cscope.po.out文件，加快cscope的索引速度
+
+4. 给vim添加数据库和查询已添加的数据库
+
+   ```
+   :cs add [数据库路径]
+   :cs show
+   ```
+
+   
+
+- s: 查找C语言符号，即查找函数名、宏、枚举值等出现的地方
+- g: 查找函数、宏、枚举等定义的位置，类似ctags所提供的功能
+- d: 查找本函数调用的函数
+- c: 查找调用本函数的函数
+- t: 查找指定的字符串
+- e: 查找egrep模式，相当于egrep功能，但查找速度快多了
+- f: 查找并打开文件，类似vim的find功能
+- i: 查找包含本文件的文件

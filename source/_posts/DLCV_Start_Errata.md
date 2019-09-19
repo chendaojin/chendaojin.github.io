@@ -37,3 +37,4 @@ description: 阅读 Adrian Rosebrock的书时发现的一些错误
    # 修改代码
    dataset = datasets.fetch_mldata（"MNIST Original", data_home="./pyimagesearch/datasets")
    ```
+
