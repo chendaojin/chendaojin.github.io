@@ -41,11 +41,11 @@ double get_launching_azimuth(double f_ld, double f_bd, double f_h,
 			{ n_ld, n_bd } //大地北
 	};
 	projUV p0 = pj_fwd(parr[0], PJ_WGS);
-	printf("发射点北京54投影  坐标:%10lf,%10lf\n", p0.u, p0.v);
+	printf("发射点投影  坐标:%10lf,%10lf\n", p0.u, p0.v);
 	projUV p1 = pj_fwd(parr[1], PJ_WGS);
-	printf("打击点北京54投影  坐标:%10lf,%10lf\n", p1.u, p1.v);
+	printf("打击点投影  坐标:%10lf,%10lf\n", p1.u, p1.v);
 	projUV p2 = pj_fwd(parr[2], PJ_WGS);
-	printf("大地北北京54投影  坐标:%10lf,%10lf\n", p2.u, p2.v);
+	printf("大地北投影  坐标:%10lf,%10lf\n", p2.u, p2.v);
 
 	double north[] = { p2.u - p0.u, p2.v - p0.v };
 	double direction[] = { p1.u - p0.u, p1.v - p0.v };
@@ -67,7 +67,7 @@ double get_launching_azimuth(double f_ld, double f_bd, double f_h,
   单位：经度(deg)，纬度(deg)，高度(m)，方位角(deg)
 
   |       发射点       |       打击点       | 方位角（deg） |
-  | :----------------: | :----------------: | :-----------: |
+  | ---------------- | ---------------- | ----------- |
   | 97.67, 33.13, 1000 | 98.67, 33.13, 1000 |   89.72308    |
   | 97.67, 33.13, 1000 | 97.67, 34.13, 1000 |    0.0000     |
   | 97.67, 33.13, 1000 | 97.67, 32.13, 1000 |    180.000    |
